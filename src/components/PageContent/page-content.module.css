@@ -1,0 +1,22 @@
+.pageContent {
+  z-index: 3;
+}
+
+h1 {
+  text-align: left;
+  text-transform: capitalize;
+  font-family: "neonoir", sans-serif;
+  font-size: 7rem;
+  font-weight: 100;
+  color: #ebe2dc;
+  margin-bottom: -4rem;
+}
+h2 {
+  text-align: left;
+  text-transform: uppercase;
+  font-family: "agenda", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #101010;
+  margin-bottom: 3rem;
+}

@@ -1,0 +1,30 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  width: fit-content;
+  position: relative;
+  height: 60%;
+  overflow: inherit;
+  margin: 0 5vw;
+}
+
+.text {
+  font-family: "agenda", sans-serif;
+  font-size: 1.3rem;
+  font-style: normal;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.cursive {
+  font-family: "neonoir", sans-serif;
+  text-transform: lowercase;
+  font-weight: 100;
+  font-size: 4rem;
+  margin: 0 0 1rem 0;
+}
+

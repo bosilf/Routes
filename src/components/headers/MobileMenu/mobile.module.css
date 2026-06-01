@@ -1,0 +1,207 @@
+.nav {
+  width: 100vw;
+  color: #000;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.nav ul, 
+.mobileMenu ul, 
+.mobileMenuTop ul {
+  top: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.arrow {
+  color: #000;
+  display: inline-flex;
+  transition: transform 0.3s ease; 
+}
+
+.arrow.rotated {
+  transform: rotate(90deg); 
+}
+
+.mobileIcon {
+  position: absolute;
+  top: 21px;
+  left: 21px;
+  border-radius: 50%;
+  display: none;
+  height: 30px;
+  width: 30px;
+  z-index: 12;
+}
+
+.dropdownMenu {
+  text-align: left;
+}
+
+.mobileIcon.active {
+  position: fixed;
+}
+
+.line {
+  background-color: #000;
+  height: 10%;
+  transition: all 1s;
+  width: 100%;
+  z-index: 13;
+}
+
+.line.active {
+  mix-blend-mode: normal;
+  background-color: #000;
+}
+
+.line1 {
+  animation: line-move1-again 1s forwards;
+  position: relative;
+}
+
+.line1.active {
+  animation: line-move1 1s forwards;
+}
+
+.line2 {
+  animation: line-move2-again 1s forwards;
+}
+
+.line2.active {
+  animation: line-move2 1s forwards;
+}
+
+.line3 {
+  animation: line-move3-again 1s forwards;
+}
+
+.line3.active {
+  animation: line-move3 1s forwards;
+}
+
+.mobileMenuTop {
+  align-items: start;
+  background-color: #ffffff;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 2px -1px 2px rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  height: 0%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: all 0.6s;
+  width: 100%;
+  z-index: 10;
+}
+
+.mobileMenuTop.active {
+  text-align: left;
+  border-radius: 0 0 22px 22px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.049);
+  display: flex;
+  height: 50%;
+  padding: 10vh 5vw 5vh 5vw;
+}
+
+.mobileMenuContent {
+  padding: 0 0 0 10vw;
+
+  opacity: 0;
+  transition: all 0.5s;
+  height: 150%;
+}
+
+.mobileMenuContent.active {
+  opacity: 1;
+}
+
+.menuShut {
+  background-color: rgb(33, 33, 33);
+  box-shadow: 0px 6px 70px 70px rgb(33, 33, 33);
+  display: block;
+  height: 100%;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: -130%;
+  transition: all 0.5s;
+  width: 100%;
+  z-index: 8;
+}
+
+.menuShut.active {
+  box-shadow: 0px 6px 700px 700px rgb(33, 33, 33);
+  opacity: 0.65;
+  top: 0;
+}
+
+.isHome {
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .mobileMenu {
+    display: flex;
+  }
+
+  .mobileIcon {
+    position: absolute;
+    left: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+@keyframes line-move1-again {
+  from { transform: rotate(50deg) translateY(6px) translateX(7.5px); }
+  50%  { transform: rotate(0deg) translateY(10px) translateX(0px); }
+  to   { transform: rotateZ(0deg) translateY(0) translateX(0px); }
+}
+
+@keyframes line-move1 {
+  from { transform: rotateZ(0deg) translateY(0) translateX(0px); }
+  50%  { transform: rotate(0deg) translateY(10px) translateX(0px); }
+  to   { transform: rotate(50deg) translateY(6px) translateX(7.5px); }
+}
+
+@keyframes line-move2-again {
+  from { transform: rotate(50deg) translateY(-0.5px) translateX(0px); }
+  50%  { transform: rotate(0deg) translateY(0px) translateX(0px); }
+  to   { transform: rotateZ(0deg) translateY(0) translateX(0px); }
+}
+
+@keyframes line-move2 {
+  from { transform: rotateZ(0deg) translateY(0) translateX(0px); }
+  50%  { transform: rotate(0deg) translateY(0px) translateX(0px); }
+  to   { transform: rotate(50deg) translateY(-0.5px) translateX(0px); }
+}
+
+@keyframes line-move3-again {
+  from { transform: rotate(-50deg) translateY(-7px) translateX(7.5px); }
+  50%  { transform: rotate(0deg) translateY(-10px) translateX(0px); }
+  to   { transform: rotateZ(0deg) translateY(0px) translateX(0px); }
+}
+
+@keyframes line-move3 {
+  from { transform: rotateZ(0deg) translateY(0px) translateX(0px); }
+  50%  { transform: rotate(0deg) translateY(-10px) translateX(0px); }
+  to   { transform: rotate(-50deg) translateY(-7px) translateX(7.5px); }
+}

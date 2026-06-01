@@ -1,0 +1,29 @@
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  padding: 0 10%;
+}
+
+.section {
+  max-width: 500px;
+}
+
+.contact {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 4fr 1fr;
+}
+
+.subjectLabel {
+  grid-column: span 2 / span 2;
+}
+.subject {
+  grid-column: span 2 / span 2;
+}
+
+.submit {
+  grid-column: span 2 / span 2;
+
+}

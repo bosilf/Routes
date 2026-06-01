@@ -1,0 +1,34 @@
+Your website should consist of:​
+    a home page​ - done
+    3 other top-level pages -
+    sub routes for at least one of the top-level routes
+
+Page Structure:
+    Each page should have a header with a logo​
+    Each page should have a navigational menu with links to the other pages
+    Each page should have a footer with some content.​
+
+To achieve a Godkänt grade you must:
+    A plan of how you will attempt this assignment
+    Routes for 4 main pages using React Router
+    Routes for at least 2 sub pages
+    Use of Layout and Outlet for consistent page structure
+    Reusable components
+    Relevant use of props
+    Relevant use of state
+    Content loaded  from a relevant data file
+    Components organised correctly
+    Responsive design.
+
+To achieve a Välgodkänt grade you must complete the above and:
+    External data loaded from one or more APIs
+    Dynamic routes
+    Directory and file organisation
+    Use of CSS modules
+    Correct code style and syntax
+    Semantic naming
+
+
+Submission: 
+    A link to the live site published on Render, Vercel or other service 
+    A link to the github repo

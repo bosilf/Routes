@@ -1,0 +1,27 @@
+.accessories {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    padding: 0 10%;
+}
+
+.nav {
+    display: flex;
+    margin: 21px 0 0 -12px;
+    gap: 1px;
+    background-color: black;
+    width: min-content;
+    height: min-content;
+}
+
+.navItem {
+    padding: 0 12px;
+    width: max-content;
+    background-color: white;
+    font-family: "agenda", sans-serif;
+    text-transform: capitalize;
+}
+
+.active {
+    text-decoration: underline;
+}

@@ -1,0 +1,114 @@
+.main {
+    flex-grow: 1;
+    margin-top: 0;
+    padding: 0;
+}
+
+span {
+    width: max-content;
+    font-family: "agenda", sans-serif;
+    color: white;
+    font-weight: 400;
+    font-size: 1.3rem;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+}
+
+.heroContent {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+    background-image: url("../../assets/hero-waves.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    object-fit: fill;
+    align-items: center;
+    position: relative;
+    z-index: -1;
+}
+
+.first {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    text-align: right;
+    z-index: 2;
+}
+.second {
+    grid-column-start: 6;
+    grid-row-start: 3;
+    text-align: left;
+    z-index: 2;
+
+}
+
+
+.img {
+    grid-column: span 3 / span 3;
+    grid-row: span 5 / span 5;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    width: auto;
+    min-height: 600px;
+    max-width: 700px;
+    justify-self: center;
+    margin-bottom: -4vh;
+    align-self: end;
+    z-index: 1;
+}
+
+.section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow: hidden;
+    gap: 21px;
+    max-width: 900px;
+    align-self: center;
+}
+
+.imgSection {
+    width: 100%;
+    height: auto;
+}
+
+.title {
+    grid-column: span 3 / span 3;
+    margin: 12px 0;
+    font-family: "agenda", sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #000;
+}
+
+@media screen and (max-width: 768px) {
+    .heroContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-content: center;
+        gap: 3vh;
+    }
+    
+    .first {
+        order: 1;
+        margin: 0;
+        grid-row-start: 1;
+        text-align: center;
+    }
+    .second {
+        order: 2;
+        margin: 0;
+        text-align: center;
+        margin-bottom: 8vh;
+    }
+    
+    .img {
+        scale: 0.6;
+        order: 3;
+        max-height: 55vh;
+        align-self: center;
+    }
+}
